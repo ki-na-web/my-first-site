@@ -1,11 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>練習サイト</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>曇ノ南農園と喫茶店</title>
+  <style>
+    body {
+      font-family: 'ヒラギノ角ゴシック', 'メイリオ', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fefefe;
+      color: #333;
+    }
+    header {
+      background-color: #6b8e23;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8em;
+    }
+    nav {
+      background-color: #f5f5f5;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #6b8e23;
+      text-decoration: none;
+    }
+    main {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 20px;
+      gap: 20px;
+    }
+    .content {
+      flex: 2;
+    }
+    .sidebar-left,
+    .sidebar-right {
+      flex: 1;
+      background-color: #fafafa;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .vertical-text {
+      writing-mode: vertical-rl;
+      font-family: 'Yu Mincho', '游明朝', serif;
+      font-size: 1.2em;
+      border-left: 2px solid #aaa;
+      padding-left: 10px;
+    }
+    .access-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #6b8e23;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    iframe {
+      width: 100%;
+      border: none;
+      height: 400px;
+    }
+    @media screen and (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>ようこそ！</h1>
-    <p>これはGitHub Pagesで公開するテストサイトです。</p>
+
+  <header>曇ノ南農園と喫茶店</header>
+  <nav>
+    <a href="#nada">なだの紹介</a>
+    <a href="#farm">農園紹介</a>
+    <a href="#cafe">喫茶店紹介</a>
+    <a href="#contact">問い合わせ</a>
+  </nav>
+
+  <main>
+    <!-- 左サイドバー -->
+    <div class="sidebar-left">
+      <h3>Instagram</h3>
+      <!-- Instagram埋め込み（例） -->
+      <iframe src="https://www.instagram.com/p/CqYj1CgNEdz/embed" allowtransparency="true"></iframe>
+      <p><a href="https://www.instagram.com/your_account/" target="_blank">Instagramで見る</a></p>
+    </div>
+
+    <!-- 中央コンテンツ -->
+    <div class="content">
+      <div class="section" id="nada">
+        <h2>なだの紹介</h2>
+        <img src="お茶摘み.jpg" alt="なだの仕事風景">
+        <p>日本茶とともに生きる「なだ」は、毎日茶畑で心を込めて葉を摘んでいます。自然と語らいながら育てた茶葉が、みなさまの一服になりますように。</p>
+      </div>
+
+      <div class="section" id="farm">
+        <h2>農園紹介</h2>
+        <img src="拝啓を茶畑.jpg" alt="茶畑の風景">
+        <p>曇ノ南農園は、山々に囲まれた静かな場所で、無農薬・手摘みにこだわった日本茶を育てています。</p>
+      </div>
+
+      <div class="section" id="cafe">
+        <h2>喫茶店紹介</h2>
+        <img src="拝啓を茶畑.jpg" alt="喫茶店の様子">
+        <p>喫茶店では、厳選された自家製茶葉と、四季折々の和菓子を楽しめます。営業時間は10時〜17時。</p>
+<ul>
+        <li>玉露（800円）</li>
+        <li>煎茶（600円）</li>
+        <li>ほうじ茶（500円）</li>
+        <li>抹茶（700円）</li>
+        <li>和紅茶（650円）</li>
+      </ul>
+      </div>
+
+      <div class="section" id="contact">
+        <h2>お問い合わせ</h2>
+        <form>
+          <label>お名前：<br><input type="text" name="name" required></label><br><br>
+          <label>メールアドレス：<br><input type="email" name="email" required></label><br><br>
+          <label>お問い合わせ内容：<br><textarea name="message" rows="4" required></textarea></label><br><br>
+          <button type="submit">送信</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- 右サイドバー -->
+    <div class="sidebar-right">
+      <h3>アクセス</h3>
+      <a class="access-button" href="https://maps.google.com/" target="_blank">Googleマップで開く</a>
+
+      <h3 style="margin-top: 30px;">茶道の名言</h3>
+      <p class="vertical-text">一期一会 —— 千利休</p>
+    </div>
+  </main>
+
 </body>
 </html>
